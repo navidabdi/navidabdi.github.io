@@ -8,5 +8,109 @@
 body {
   font-family: 'Red Hat Display', sans-serif;
   font-size: 1rem;
-  background-color: hsl(225, 100%, 94%);
+  background: hsl(225, 100%, 94%) url(./images/pattern-background-desktop.svg)
+    no-repeat center -15rem;
+  background-size: cover;
+  color: hsl(224, 23%, 55%);
+}
+img {
+  max-width: 100%;
+}
+a:focus,
+button:focus {
+  outline: none;
+}
+.attribution {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-summary {
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px 5px hsl(224deg 23% 55% / 20%);
+}
+.order-summary .info {
+  padding: 2.6rem 2.6rem 0 2.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.description {
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+.description h1 {
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+  margin-bottom: 1rem;
+}
+.description p {
+  line-height: 1.6rem;
+}
+.plan {
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.plan-icon-data {
+  display: flex;
+  align-items: center;
+}
+.plan-icon-data img {
+  margin-right: 1rem;
+}
+.plan .plan-data {
+  display: flex;
+  flex-direction: column;
+}
+.plan .plan-data b {
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+.plan a {
+  color: hsl(245, 75%, 52%);
+  font-weight: 600;
+}
+button {
+  border: none;
+  background: transparent;
+  color: hsl(224, 23%, 55%);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+button.payment {
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  box-shadow: 0px 7px 30px 5px hsl(245deg 75% 52% / 30%);
+}
+@media screen and (max-width: 768px) {
+  body {
+    background: hsl(225, 100%, 94%) url(./images/pattern-background-mobile.svg)
+      no-repeat center -15rem;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 992px) {
+  .attribution {
+    display: none;
+  }
 }
