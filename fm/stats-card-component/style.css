@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.925rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats-card {
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  width: 70rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.stats-card .hero-img {
+  flex-basis: 50%;
+  flex-shrink: 1;
+  position: relative;
+  background-color: hsl(277, 64%, 61%);
+}
+.stats-card .hero-img img {
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.stats-card .hero-info {
+  flex-basis: 50%;
+  flex-shrink: 1;
+  padding: 4rem 7rem 4rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.description h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+.description h1 span {
+  color: hsl(277, 64%, 61%);
+}
+.description p {
+  line-height: 1.7rem;
+}
+.hero-info .data {
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-info .data div p:nth-child(1) {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: hsl(0, 0%, 100%);
+}
+.attribution {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+.attribution a {
+  color: hsl(277, 64%, 61%);
+}
+@media screen and (max-width: 992px) {
+  .stats-card {
+    width: 95%;
+  }
+  .stats-card .hero-info {
+    padding: 4rem;
+  }
+  .stats-card .hero-info h1 {
+    font-size: 1.6rem;
+  }
+  .attribution {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .stats-card .hero-info {
+    padding: 2rem;
+  }
+  .stats-card .hero-info p {
+    font-size: 0.875rem;
+  }
+  .hero-info .data div p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .stats-card {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: 3rem 0;
+  }
+  .stats-card .hero-info {
+    padding: 2rem;
+  }
+  .stats-card .hero-info h1,
+  .stats-card .hero-info p {
+    text-align: center;
+  }
+  .hero-info .data {
+    flex-direction: column;
+    min-height: 12rem;
+    margin-top: 2rem;
+  }
+}
