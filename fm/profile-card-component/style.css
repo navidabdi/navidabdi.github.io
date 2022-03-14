@@ -119,6 +119,10 @@ body main::before {
   }
 }
 @media screen and (max-width: 768px) {
+  .peofile-card {
+    width: 21rem;
+  }
+
   body {
     overflow-y: auto;
   }
