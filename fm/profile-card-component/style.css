@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: hsl(185, 75%, 39%);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+body main::after {
+  content: '';
+  position: absolute;
+  width: 60rem;
+  height: 60rem;
+  background: url(./images/bg-pattern-bottom.svg) no-repeat;
+  background-size: contain;
+  right: -11%;
+  bottom: -81%;
+}
+body main::before {
+  content: '';
+  position: absolute;
+  width: 60rem;
+  height: 60rem;
+  background: url(./images/bg-pattern-top.svg) no-repeat;
+  background-size: contain;
+  left: -16%;
+  top: -61%;
+}
+.peofile-card {
+  width: 22rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0px 15px 35px 15px hsl(227deg 10% 46% / 30%);
+}
+.peofile-card .info {
+  background-color: #fff;
+}
+.peofile-card .description {
+  text-align: center;
+  padding: 4.5rem 3rem 1.5rem 3rem;
+}
+.peofile-card .description h3 {
+  font-size: 1.125rem;
+  color: hsl(229, 23%, 23%);
+}
+.peofile-card .description h3 span {
+  color: hsl(0, 0%, 59%);
+  font-weight: 400;
+}
+.peofile-card .description p {
+  color: hsl(0, 0%, 59%);
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+.peofile-card .author-photo {
+  position: relative;
+}
+.peofile-card .avatar {
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50px;
+  border: 0.3rem solid #fff;
+}
+.peofile-card .social-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  border-top: 1px solid hsl(0, 0%, 59%, 30%);
+}
+.peofile-card .social-data > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.peofile-card .social-data > div > p:nth-child(1) {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+}
+.peofile-card .social-data > div > p:nth-child(2) {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(227, 10%, 46%);
+  letter-spacing: 1px;
+  margin-top: 0.2rem;
+}
+.attribution {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+.attribution a {
+  color: hsl(229, 23%, 23%);
+}
+@media screen and (max-width: 992px) {
+  .attribution {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+}
