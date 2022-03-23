@@ -14,48 +14,71 @@
 
     <title>Frontend Mentor | Social proof section</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./js/ratedData.js"></script>
   </head>
   <body>
-    10,000+ of our users love our products.
+    <main>
+      <section class="social-proof">
+        <div class="top">
+          <div class="left">
+            <h1>10,000+ of our users love our products.</h1>
+            <p>
+              We only provide great products combined with excellent customer
+              service. See what our satisfied customers are saying about our
+              services.
+            </p>
+          </div>
+          <div class="right">
+            <script>
+              const right = document.querySelector('.social-proof .right');
+              right.innerHTML = ratedData
+                .map(
+                  (rate) => `
+                     <div class="rate-box ${rate.id}">
+                      <div class="stars">
+                        ${starNumber(rate.starNum)}
+                      </div>
+                      <p>${rate.text}</p>
+                    </div>
+                  `
+                )
+                .join('');
+            </script>
+          </div>
+        </div>
+        <div class="bottom">
+          <script>
+            const bottom = document.querySelector('.social-proof .bottom');
+            bottom.innerHTML = commentsData
+              .map(
+                (comment) => `
+                     <div class="commentbox ${comment.id}">
+                      <div class="user-info">
+                        <div class="avatar">
+                        <img src="${comment.avatar}" alt="" />
 
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
+                        <div class="title">
+                          <h4>${comment.name}</h4>
+                          <p>${comment.type}</p>
+                        </div>
+                        </div>
+                        <p class="comment">${comment.comment}</p>
+                      </div>
+                    </div>
+                  `
+              )
+              .join('');
+          </script>
+        </div>
+      </section>
+    </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <footer class="attribution">
+      Challenge by Frontend Mentor. Coded by
+      <a href="https://www.youtube.com/channel/UCxd6yE9578AmHr1DIRAnJdA"
+        >Navid Dev</a
+      >.
+    </footer>
   </body>
 </html>
