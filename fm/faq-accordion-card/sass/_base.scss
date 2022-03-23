@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Primary Colors
+--------------------------------------*/
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+
+/* Neutral Colors
+--------------------------------------*/
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+$light-grayish-blue: hsl(240, 5%, 91%);
+$white: hsl(0, 100%, 100%);
+$gray-trans: hsl(0, 0, 50%, 0.1);
+$black-trans: hsl(0, 0, 20%, 0.5);
+
+/* Colors by element
+--------------------------------------*/
+$clr-bg-gradient-1: $soft-violet;
+$clr-bg-gradient-2: $soft-blue;
+$clr-txt-header: $very-dark-desaturated-blue;
+$clr-txt-accordion: $dark-grayish-blue;
+$clr-txt-accordion-hover: $soft-red;
+$clr-txt-accordion-active: $very-dark-desaturated-blue;
+$clr-txt-panel: $dark-grayish-blue;
+$clr-arrow-icon: $soft-red;
+$clr-divider-line: $light-grayish-blue;
+$clr-attribution-text: $light-grayish-blue;
+$clr-bg-card: $white;
+$clr-line: $light-grayish-blue;
+$clr-img-shadow: $gray-trans;
+$clr-card-shadow: $black-trans;
+
+/* Breakpoints
+--------------------------------------*/
+$breakpoint-md: 768px;
+$breakpoint-lg: 899px;
+
+/* Typography
+--------------------------------------*/
+$font-size: 12px;
+$ff-primary: 'Kumbh Sans', sans-serif;
+
+/* Reset
+--------------------------------------*/
+html,
+body,
+main,
+h1,
+h2,
+p,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root
+--------------------------------------*/
+:root {
+  font-size: $font-size;
+}

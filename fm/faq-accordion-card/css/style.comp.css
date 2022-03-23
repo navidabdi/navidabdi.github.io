@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* Primary Colors
+--------------------------------------*/
+/* Neutral Colors
+--------------------------------------*/
+/* Colors by element
+--------------------------------------*/
+/* Breakpoints
+--------------------------------------*/
+/* Typography
+--------------------------------------*/
+/* Reset
+--------------------------------------*/
+html,
+body,
+main,
+h1,
+h2,
+p,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root
+--------------------------------------*/
+:root {
+  font-size: 12px;
+}
+
+html {
+  height: auto;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 12.5rem 1.9rem 0 1.9rem;
+}
+@media (min-width: 768px) {
+  main {
+    padding: 10rem 5rem 0 5rem;
+  }
+}
+
+.attribution {
+  color: #e7e7e9;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: #f47c57;
+}
+.attribution a:hover {
+  color: #af67e9;
+  text-decoration: none;
+}
+
+/* Card
+--------------------------------------*/
+.card {
+  background-color: white;
+  width: 100%;
+  max-width: 77rem;
+  border-radius: 2rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  box-shadow: 0 1rem 4rem rgba(51, 51, 51, 0.5);
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top -0.5rem center;
+  /* Header Image */
+  /* FAQ Content */
+}
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-image: none;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 899px) {
+  .card {
+    gap: 3rem;
+  }
+}
+.card-image {
+  overflow: visible;
+  margin: -9.5rem auto 0 auto;
+}
+@media (min-width: 768px) {
+  .card-image {
+    width: 50rem;
+    padding-bottom: 6rem;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: top -14rem left -47rem;
+    background-size: 80rem;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 899px) {
+  .card-image {
+    background-size: 73rem;
+  }
+}
+.card-image .image-mobile {
+  width: 20rem;
+}
+@media (min-width: 768px) {
+  .card-image .image-mobile {
+    display: none;
+  }
+}
+.card-image .image-desktop-woman {
+  display: none;
+}
+@media (min-width: 768px) {
+  .card-image .image-desktop-woman {
+    display: block;
+    min-width: 34rem;
+    width: 100%;
+    margin: 15.5rem 0 0 -7.5rem;
+  }
+}
+.card-image .image-desktop-box {
+  display: none;
+}
+@media (min-width: 768px) {
+  .card-image .image-desktop-box {
+    display: block;
+    position: absolute;
+    margin: 26.5rem 0 0 -7rem;
+    width: 100%;
+    max-width: 15rem;
+  }
+}
+.card-body {
+  padding: 0 2rem;
+  /* FAQ Heading */
+}
+@media (min-width: 768px) {
+  .card-body {
+    width: 100%;
+    padding: 1rem 9rem 0 0;
+    max-width: 28rem;
+    text-align: left;
+  }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+  .card-body {
+    padding-right: 3rem;
+  }
+}
+.card-body .heading {
+  color: #1d1e35;
+  font-size: 2.7rem;
+  padding: 4.5rem 0 3rem 0;
+}
+
+/* Accordion
+--------------------------------------*/
+.wrapper {
+  margin-top: -1.5rem;
+}
+
+.accordion {
+  text-align: left;
+  position: relative;
+  border-bottom: 1px solid #e7e7e9;
+  /* Accordion Header */
+  /* Accordion Panel */
+}
+.accordion-header h2 {
+  padding: 1.4rem 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #787887;
+  cursor: pointer;
+  /* Arrow */
+}
+@media (min-width: 768px) {
+  .accordion-header h2 {
+    font-size: 1.2rem;
+  }
+}
+.accordion-header h2:after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  margin-left: auto;
+  background-image: url(../images/icon-arrow-down.svg);
+  background-size: 1rem 0.6rem;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1rem;
+  height: 0.6rem;
+}
+.accordion-header h2:hover {
+  color: #f47c57;
+}
+.accordion-panel {
+  width: 90%;
+  color: #787887;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+@media (min-width: 768px) {
+  .accordion-panel {
+    width: 100%;
+  }
+}
+.accordion .active h2 {
+  color: #1d1e35;
+  font-weight: 700;
+}
+.accordion .active h2:after {
+  transform: scaleY(-1) translateY(0);
+  top: unset;
+}
+.accordion .active + .accordion-panel {
+  padding-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=style.comp.css.map */
