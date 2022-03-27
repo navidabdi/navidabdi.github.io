@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+// Variables
+// ### Primary
+
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+
+// ### Neutral
+
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+// ### Gradients
+
+$gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  background: url(./images/bg-pattern-desktop.svg), $gradient-1;
+  main {
+    min-height: 100vh;
+  }
+}
+
+.coming-soon {
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  display: flex;
+  justify-content: space-between;
+  .hero-img {
+    max-height: 100vh;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .hero-img-moblie {
+    display: none;
+    margin: 2rem 0;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 10rem;
+    max-width: 800px;
+    @media screen and (max-width: 992px) {
+      padding: 2rem;
+      max-width: auto;
+    }
+    .data {
+      // @media screen and (max-width: 992px) {
+      //   margin-bottom: 2rem;
+      // }
+      margin-bottom: 2rem;
+      h1 {
+        font-size: 4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $Desaturated-Red;
+        letter-spacing: 14px;
+        margin-bottom: 1.7rem;
+        @media screen and (max-width: 768px) {
+          font-size: 2.8rem;
+          text-align: center;
+        }
+        span {
+          font-weight: 700;
+          color: $Dark-Grayish-Red;
+        }
+      }
+      p {
+        color: $Desaturated-Red;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+        }
+      }
+      form {
+        overflow: hidden;
+        padding-right: 10px;
+        .error-text {
+          color: $Soft-Red;
+          transform: translateX(-200px);
+          opacity: 0;
+          font-size: 0.8rem;
+          line-height: 2rem;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .email-input {
+        border: 2px solid #ce979769;
+        border-radius: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3.4rem;
+        position: relative;
+        input {
+          border: none;
+          outline: none;
+          height: 100%;
+          width: 100%;
+          display: block;
+          border-radius: 100px;
+          padding: 1rem 2rem;
+          font-size: 0.9rem;
+          font-family: 'Josefin Sans', sans-serif;
+          &::placeholder {
+            color: $Desaturated-Red;
+          }
+        }
+
+        button {
+          border: none;
+          height: 107%;
+          border-radius: 100px;
+          padding: 0 2.5rem;
+          text-align: center;
+          background: $gradient-2;
+          box-shadow: 0 10px 15px rgba(206, 151, 151, 0.2);
+          cursor: pointer;
+          margin-right: -3px;
+          z-index: 1;
+          transition: all 0.3s ease;
+          &:hover {
+            background: linear-gradient(
+              135deg,
+              hsl(0, 80%, 86%, 0.5),
+              hsl(0, 74%, 74%, 0.5)
+            );
+          }
+        }
+
+        .error-icon {
+          position: absolute;
+          top: 50%;
+          right: 100px;
+          transform: translate(50px, -50%);
+          pointer-events: none;
+          z-index: 0;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .valid {
+        .email-input {
+          border: 2px solid rgb(0, 235, 0);
+        }
+      }
+      .error {
+        .email-input {
+          border: 2px solid $Soft-Red;
+        }
+        .error-icon {
+          opacity: 1;
+          transform: translate(0, -50%);
+        }
+        .error-text {
+          transform: translateX(40px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .logo {
+    max-width: 9.5rem;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  left: 11%;
+  color: $Desaturated-Red;
+  a {
+    color: $Soft-Red;
+  }
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
