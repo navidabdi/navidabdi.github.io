@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  background-color: #e5eff5;
+  color: #fff;
+}
+body main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.single-price {
+  display: grid;
+  width: min(39.8rem, 90%);
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 4px 5px 30px 8px rgba(120, 136, 165, 0.15);
+}
+@media screen and (max-width: 578px) {
+  .single-price {
+    margin: 2rem 0;
+  }
+}
+.single-price .description {
+  background-color: #fff;
+  grid-column: span 2;
+  padding: 2.5rem;
+}
+.single-price .description h1 {
+  color: #2ab2af;
+}
+.single-price .description h2 {
+  color: #c0df34;
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.9rem 0;
+}
+.single-price .description p {
+  line-height: 1.5;
+  font-size: 0.98rem;
+  color: #98a6bd;
+}
+.single-price .price-info {
+  background-color: #2ab2af;
+  padding: 2.5rem;
+}
+@media screen and (max-width: 578px) {
+  .single-price .price-info {
+    grid-column: span 2;
+  }
+}
+.single-price .price-info h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1.4rem;
+}
+.single-price .price-info .price-per-month {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.single-price .price-info .price-per-month p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #e5eff5;
+  opacity: 0.8;
+}
+.single-price .price-info p.full-access {
+  font-size: 0.975rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+.single-price .price-info button.sign-up {
+  width: 100%;
+  margin-top: 2rem;
+  border: none;
+  background-color: #c0df34;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.9rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 15px 2px rgba(57, 64, 77, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.single-price .price-info button.sign-up:hover {
+  background-color: #a7c520;
+}
+.single-price .why-us {
+  background-color: rgba(42, 178, 175, 0.75);
+  padding: 2.5rem;
+  padding-right: 6.2rem;
+}
+@media screen and (max-width: 700px) {
+  .single-price .why-us {
+    padding-right: 2.5rem;
+  }
+}
+@media screen and (max-width: 578px) {
+  .single-price .why-us {
+    grid-column: span 2;
+  }
+}
+.single-price .why-us h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.single-price .why-us p {
+  color: #e5eff5;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #98a6bd;
+}
+.attribution a {
+  color: #2ab2af;
+}
+@media screen and (max-width: 1200px) {
+  .attribution {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

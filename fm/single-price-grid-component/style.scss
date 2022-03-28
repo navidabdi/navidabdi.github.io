@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// ## Colors
+
+// ### Primary
+
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+
+// ### Neutral
+
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  background-color: $Light-Gray;
+  color: #fff;
+  main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+}
+
+.single-price {
+  display: grid;
+  width: min(39.8rem, 90%);
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 4px 5px 30px 8px rgba(120, 136, 165, 0.15);
+  @media screen and (max-width: 578px) {
+    margin: 2rem 0;
+  }
+  .description {
+    background-color: #fff;
+    grid-column: span 2;
+    padding: 2.5rem;
+    h1 {
+      color: $Cyan;
+    }
+    h2 {
+      color: $Bright-Yellow;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.9rem 0;
+    }
+    p {
+      line-height: 1.5;
+      font-size: 0.98rem;
+      color: $Grayish-Blue;
+    }
+  }
+  .price-info {
+    background-color: $Cyan;
+    padding: 2.5rem;
+    @media screen and (max-width: 578px) {
+      grid-column: span 2;
+    }
+    h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 1.4rem;
+    }
+    .price-per-month {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 2rem;
+      font-weight: 700;
+
+      p {
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: $Light-Gray;
+        opacity: 0.8;
+      }
+    }
+    p.full-access {
+      font-size: 0.975rem;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    button.sign-up {
+      width: 100%;
+      margin-top: 2rem;
+      border: none;
+      background-color: $Bright-Yellow;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.9rem;
+      border-radius: 0.3rem;
+      box-shadow: 0 0 15px 2px rgba(57, 64, 77, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: hsl(71, 72%, 45%);
+      }
+    }
+  }
+  .why-us {
+    background-color: hsl(179, 62%, 43%, 0.75);
+    padding: 2.5rem;
+    padding-right: 6.2rem;
+    @media screen and (max-width: 700px) {
+      padding-right: 2.5rem;
+    }
+    @media screen and (max-width: 578px) {
+      grid-column: span 2;
+    }
+    h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      color: $Light-Gray;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $Grayish-Blue;
+  a {
+    color: $Cyan;
+  }
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
